@@ -22,6 +22,11 @@ nav a {
     font-size: 18px;
 }
 
+nav a:hover {
+    text-decoration: underline;
+    color: purple;
+}
+
 .content {
     width: 70%;
     margin: 50px auto;
