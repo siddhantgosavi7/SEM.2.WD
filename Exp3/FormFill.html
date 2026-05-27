@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Trip</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #9face6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 400px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    .radio-group, .checkbox-group {
+        margin-top: 5px;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        background-color: #3498db;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Book Your Trip</h1>
+
+<form action="#" method="post">
+
+<label>Full Name</label>
+<input type="text" name="fullname" placeholder="Enter your full name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<label>Password</label>
+<input type="password" name="password" placeholder="Enter your password" required>
+
+<label>Mobile Number</label>
+<input type="tel" name="mobile" placeholder="Enter your mobile number" required>
+
+<label>No. of Travellers</label>
+<input type="number" name="travellers" min="1" max="5" required>
+
+<label>Date</label>
+<input type="date" name="date" required>
+
+<label>Choose Destination</label>
+<select name="destination" required>
+    <option value="">Select Destination</option>
+    <option value="Mahabaleshwar">Mahabaleshwar</option>
+    <option value="Malvan">Malvan</option>
+    <option value="Goa">Goa</option>
+</select>
+
+<label>Gender</label>
+<div class="radio-group">
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female"> Female
+</div>
+
+<label>Travel Type</label>
+<div class="checkbox-group">
+    <input type="checkbox" name="traveltype" value="Adventure"> Adventure
+    <input type="checkbox" name="traveltype" value="Culture"> Culture
+    <input type="checkbox" name="traveltype" value="Leisure"> Leisure
+</div>
+
+<button type="submit">Book Now</button>
+
+</form>
+</div>
+
+</body>
+</html>

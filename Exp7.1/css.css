@@ -1,0 +1,64 @@
+body {
+    background-color: #403d81;
+    font-family: Arial, sans-serif;
+}
+
+section h2 {
+    color: #42a6d1;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.photo-gallery {
+    position: relative;
+    max-width: 70%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container stays as track */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Each image becomes a slide */
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+/* Buttons stay the same */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-button:active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-button:first-of-type {
+    left: 10px;
+}
+
+.carousel-button:last-of-type {
+    right: 10px;
+}

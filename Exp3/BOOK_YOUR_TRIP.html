@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Trip</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        align-items: center;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        width: 400px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    .radio-group, .checkbox-group {
+        margin-top: 5px;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        background-color: #3498db;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+</style>
+</head>
+
+<body>
+
+    <center>
+        <div class="container">
+        <h1>Book Your Trip</h1>
+            <table>
+            <tr>
+                <td><label>Full Name</label></td>
+                <td><input type="text" name="firstname" placeholder="Enter your first name" required></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password" name="password" placeholder="Enter your password" required></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" placeholder="Enter your email" required></td>
+            </tr>
+            <tr>
+                <td><label>No of Travellers</label></td>
+                <td><input type="number" name="travellers" min="1" max="5" required></td>
+            </tr>
+            <tr>
+                <td><label>Mobile Number</label></td>
+                <td><input type="tel" name="mobile" placeholder="Enter your mobile number" required></td>
+            </tr>
+            <tr>
+                <td><label>Date</label></td>
+                <td><input type="date" name="date" required></td>
+            </tr>
+            <tr>
+                <td><label>Choose Destination</label></td>
+                <td>
+                    <select name="destination" required>
+                    <option value="Kolhapur">Kolhapur</option>
+                    <option value="Mahabaleshwar">Mahabaleshwar</option>
+                    <option value="Malvan">Malvan</option>
+                    <option value="Goa">Goa</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
+                    <div class="radio-group">
+                    <input type="radio" name="gender" value="Male" required> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Travel Type</label></td>
+                <td><div class="checkbox-group">
+                    <input type="checkbox" name="traveltype" value="Adventure"> Adventure <br>
+                    <input type="checkbox" name="traveltype" value="Culture"> Culture <br>
+                    <input type="checkbox" name="traveltype" value="Leisure"> Leisure <br>
+                    </div>
+                </td>
+            </tr>
+                <td><button type="submit">Book Now</button></td>
+                <td><button type="reset">Reset</button></td>
+            </table>
+    </div>
+    </center>
+</body>
+</html>

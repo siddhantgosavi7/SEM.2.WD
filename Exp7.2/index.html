@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        margin-top: 30px;
+    }
+
+    form {
+        background: white;
+        max-width: 400px;
+        margin: 40px auto;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    input:focus, select:focus {
+        border-color: #4facfe;
+        outline: none;
+        box-shadow: 0 0 5px rgba(79,172,254,0.5);
+    }
+
+    /* Radio buttons inline */
+    input[type="radio"] {
+        width: auto;
+        margin-right: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #4facfe;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #00c6ff;
+    }
+</style>
+</head>
+<body>
+    <script>
+        function greet() {
+            var name = document.getElementById("name").value;
+            alert("Hello, " + name + "!");
+
+            var a = document.getElementById("first-name").value;
+            var b = document.getElementById("last-name").value;
+            var c = document.getElementById("email").value;
+            var d = document.getElementById("password").value;
+
+            if (a || b || c || d) {
+                alert("Fields are not filled.");
+            } else {
+                alert("All fields are filled.");
+            }
+        }
+    </script>
+
+    <h1>Student Form</h1><br> 
+
+    <form action="page2.html" method="get" onsubmit="greet(); return false;">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required><br><br>
+        
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required> <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required> <br><br>        
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"> <br><br>
+
+        <div style="margin-bottom: 15px;">
+            <label>Gender:</label>
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <label for="clsdd">Class:</label>
+        <select name="clsdd" id="class">
+            <option value="default">Select Class</option>
+            <option value="FY">FY</option>
+            <option value="SY">SY</option>
+            <option value="TY">TY</option>
+            <option value="Final Year">Final Year</option>
+        </select>
+
+        <label for="file"></label>
+        <input type="file">
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
