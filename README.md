@@ -8,31 +8,28 @@
 ## 📘 Web Design Experiments
 
 ### Experiment 1 - Resume
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/Exp1/Resume.html
+🔗https://siddhantgosavi7.github.io/Resume/
 
-### Experiment 2 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/Exp2/04_02_2026.html
+### Experiment 2 - Taj Hotel
 
-### Experiment 3 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/Exp3/FormFill.html
+### Experiment 2.1 - Cyber cell
 
-### Experiment 4 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/EXP4/about.html
+### Experiment 3 - Form Fill
 
-### Experiment 5 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/EXP5/index.html
+### Experiment 4 - Welcome toKITCoEK
 
-### Experiment 6 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/EXP6/Semantic_tag.html
+### Experiment 5 - Limited Production Hyercars
+🔗https://siddhantgosavi7.github.io/Limited-Production-Hypercars/
 
-### Experiment 7 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/EXP7/index.html
+### Experiment 6 - Semantic tags
 
-### Experiment 8 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/EXP8/bootstrap.html
+### Experiment 7.1 - Slide show
 
-### Experiment 9 - 
-🔗 https://siddhantgosavi7.github.io/SEM.2.WD/EXP9/index.htmls
+### Experiment 7.2 - Basic Js
+
+### Experiment 8 - bootstrap
+
+### Experiment 9 - Sliding Sidebar
 
 ---
 
