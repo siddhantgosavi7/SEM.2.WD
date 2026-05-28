@@ -1,51 +1,117 @@
-$(document).ready(function () {
+const messages = [
 
-    $("#showMessage").click(function () {
+    "I warned you.",
+    "Initializing hosting sequence...",
+    "Connecting to remote server...",
+    "Access granted.",
+    "Downloading unnecessary stress...",
+    "Error 404: Motivation not found.",
+    "Scanning academic trauma...",
+    "Congratulations. You survived assignments that nobody will remember.",
+    "Your code compiles. Your life doesn’t.",
+    "Rebuilding confidence...",
+    "FAILED.",
+    "Your GPA is temporary.",
+    "Detecting sleep deprivation...",
+    "You’re not procrastinating. You’re just prioritizing panic.",
+    "Contacting placement cell...",
+    "No response.",
+    "Placed? No. Traumatized? Yes.",
+    "Decrypting semester memories...",
+    "Midnight submissions detected.",
+    "Fear levels critical.",
+    "Your degree is a piece of paper. Your stress is real.",
 
-        $("#message").hide();
+    ".../...",
+    "...|...",
+    "...\\...",
+    "...--...",
+
+    "WARNING: Reality.exe has stopped responding.",
+    "Injecting last-minute bug fixes...",
+    "Hacking server connection...",
+    "Bypassing college WiFi restrictions...",
+    "Uploading dreams.zip...",
+    "Compressing tears.rar...",
+    "Starting web services...",
+    "Finalizing deployment...",
+
+    "System stabilized.",
+    "Hope restored.",
+    "Hosting successful. 🚀"
+
+];
+
+// CLICK ME BUTTON
+$(document).ready(() => {
+
+    $("#showMessage").click(() => {
+
+        $("#msg").hide();
 
         $("#message")
-            .html("Website is successfully hosted!")
+            .hide()
+            .html(`
+                <div class="success-card">
+                    <h2>🚀 Website Successfully Hosted</h2>
+
+                    <p>
+                        Your website is now live on the server.
+                    </p>
+
+                    <span>
+                        Deployment completed successfully.
+                    </span>
+                </div>
+            `)
             .fadeIn(1000);
 
     });
 
 });
-const messages = [  "Congratulations. You survived assignments that nobody will remember.",
-                    "Your GPA is temporary.",
-                    "“All this struggle… just to say ‘good morning sir’ in interviews.",
-                    "You came for education. You got PDFs.",
-                    "Achievement unlocked: Deadline Survivor.",
-                    "Your attendance increased. Happiness decreased.",
-                    "Behind every engineer is FINAL_FINAL_v2_REAL.",
-                    "Placed? No. Traumatized? Yes.",
-                    "You mastered writing programs you’ll never run again.",
-                    "You didn’t waste your college life. College wasted it for you.",
-                    "You’re not just a student. You’re a PDF collector.",
-                    "Your code compiles. Your life doesn’t.",
-                    "You survived the semester. Barely.",
-                    "Your GPA is a myth. Like Bigfoot.",
-                    "You’re not procrastinating. You’re just prioritizing panic.",
-                    "Your degree is a piece of paper. Your stress is real."
-                ];
 
+// DON'T CLICK BUTTON
+function showMessage() {
 
-                let intervalStarted = false;
+    $("button").prop("disabled", true);
 
-                function startMessages() {
-                document.getElementById("msg").style.display = "block";
-                showMessage()
-                    if (!intervalStarted) {
-                        intervalStarted = true;
-                    }
-                }
+    let i = 0;
 
-                function showMessage() {
-                    const random = messages[Math.floor(Math.random() * messages.length)];
-                    document.getElementById("msg").innerText = random;
-                }
-                
-                if (intervalStarted) {
-                    setInterval(showMessage, 3000);
-                }
-                
+    $("#message").html("");
+    $("#msg").show().text(messages[i]);
+
+    const interval = setInterval(() => {
+
+        i++;
+
+        if (i < messages.length) {
+
+            $("#msg")
+                .fadeOut(150, function () {
+                    $(this)
+                        .text(messages[i])
+                        .fadeIn(300);
+                });
+
+        } else {
+
+            clearInterval(interval);
+
+            $("#message").html(`
+                <div class="success-card">
+                    <h2>✅ Hosting Successful</h2>
+
+                    <p>
+                        Your webpage is now live and accessible.
+                    </p>
+
+                    <span>
+                        Server deployment completed.
+                    </span>
+                </div>
+            `);
+
+        }
+
+    }, 2000);
+}
